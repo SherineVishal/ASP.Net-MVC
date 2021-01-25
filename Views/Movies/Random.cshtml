@@ -1,0 +1,46 @@
+﻿<!--Adding Model to the View-->
+@* @(model Vidly.Models.Movie) *@
+
+<!--Adding ViewModel-->
+@model Vidly.ViewModel.RandomMovieViewModel
+
+
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*
+    <!--Method I-->
+    <h2>@Model.Name</h2>
+
+    <!-- Method II: using ViewData-->
+    <h2>@( ((Movie)ViewData["Movie"]).Name )</h2>
+
+    <!--Method III: using ViewBag-->
+    <h2>@ViewBag.Movie</h2>
+*@
+
+@{ 
+    var className = Model.Customers.Count > 5 ? "popular" : null;
+}
+
+<!-- Displaying data from ViewModel -->
+<!-- Assigning classname dynamicaly-->
+<h2 class="@className">@Model.Movie.Name</h2>
+
+//using Razor syntax
+@if (Model.Customers.Count == 0)
+{
+    <p>No customer has rented this movie</p>
+}
+else
+{
+<ul>
+    @foreach(var customer in Model.Customers)
+    {
+        <li>@customer.Name</li>
+    }
+</ul>
+}
+
