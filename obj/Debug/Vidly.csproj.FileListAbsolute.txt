@@ -141,3 +141,9 @@ C:\Users\sheri\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.corrections.r
 C:\Users\sheri\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.corrections1.resources
 C:\Users\sheri\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.corrections2.resources
 C:\Users\sheri\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.corrections3.resources
+C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.dll
+C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.xml
+C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
