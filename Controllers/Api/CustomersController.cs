@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Data.Entity;
 using Vidly.Models;
 
 namespace Vidly.Controllers.Api
@@ -19,13 +20,13 @@ namespace Vidly.Controllers.Api
         //GET /api/customers
         public IHttpActionResult GetCustomers()
         {
-            return Ok(_context.Customers.ToList());
+            return Ok(_context.Customers.Include(c=>c.MembershipType).ToList());
         }
 
         //GET /api/customer/id
         public IHttpActionResult GetCustomer(int id)
         {
-            var customer = _context.Customers.SingleOrDefault(c=>c.Id==id);
+            var customer = _context.Customers.Include(c=>c.MembershipType).SingleOrDefault(c=>c.Id==id);
             if (customer == null)
                  return NotFound();
             return Ok(customer);
