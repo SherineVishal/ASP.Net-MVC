@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Data.Entity;
 using Vidly.Models;
 
 namespace Vidly.Controllers.Api
@@ -20,7 +21,7 @@ namespace Vidly.Controllers.Api
         //GET /api/movies
         public IHttpActionResult GetMovies()
         {
-            var movie = _context.Movies.ToList();
+            var movie = _context.Movies.Include(c=>c.Genre).ToList();
             return Ok(movie);
         }
 
@@ -33,7 +34,9 @@ namespace Vidly.Controllers.Api
             return Ok(movieInDB);
         }
 
+
         //POST /api/movies
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpPost]
         public IHttpActionResult CreateMovie(Movie movie)
         {
@@ -44,7 +47,9 @@ namespace Vidly.Controllers.Api
             return Ok();
         }
 
+
         //PUT /api/movies/id
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpPut]
         public IHttpActionResult UpdateMovie(int id,Movie movie)
         {
@@ -62,6 +67,7 @@ namespace Vidly.Controllers.Api
         }
 
         //DELETE /api/movies/id
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpDelete]
         public IHttpActionResult DeleteMovie(int id)
         {

@@ -147,3 +147,5 @@ C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
 C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
 C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.xml
 C:\Users\sheri\source\repos\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+C:\Users\sheri\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
+C:\Users\sheri\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddDrivingLicense.resources
